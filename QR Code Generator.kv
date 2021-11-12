@@ -1,0 +1,35 @@
+MDScreen:
+    MDCard:
+        size_hint: None, None
+        size: 300, 430
+        orientation: "vertical"
+        padding: 20
+        spacing: 20
+        pos_hint: {"center_x": .5, "center_y": .5}
+        elevation: 15
+        MDLabel:
+            id: title
+            text: "QR Code Generator"
+            font_size: 30
+            halign: "center"
+        MDTextFieldRound:
+            id: link
+            hint_text: "Enter Your URL"
+            icon_left: "link"
+        MDTextFieldRound:
+            id:file
+            hint_text: "Enter File Name"
+            icon_left: "file"
+        MDFillRoundFlatIconButton:
+            text: "Generate"
+            pos_hint: {"center_x": .5}
+            on_release: app.gen()
+            icon: "file-plus"
+        MDRoundFlatIconButton:
+            text: "Clear"
+            pos_hint: {"center_x": .5}
+            on_release: app.clfs()
+            icon: "delete"
+        Image:
+            id: qr_image
+            source:"D:\KivyMD\KivyMD\QR Code Generator\img.png"
